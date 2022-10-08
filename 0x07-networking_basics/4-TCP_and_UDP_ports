@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script that displays listening ports: Only shows listening ports/PID/program name
+netstat -lp
