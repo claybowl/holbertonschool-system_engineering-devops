@@ -1,6 +1,7 @@
-host claytonchristian
+host claybowl
 		HostName 54.167.73.245
 		User ubuntu
 		PasswordAuthentication No
 		StrictHostKeyChecking No
 		IdentityFile ~/.ssh/school
+
