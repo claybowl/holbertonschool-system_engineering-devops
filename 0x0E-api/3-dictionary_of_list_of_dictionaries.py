@@ -8,7 +8,7 @@ import requests
 import sys
 
 
-def todo_all_employees():
+def everyone_todo_to_JSON():
     """makes dictionary list of dictionaries"""
     url = 'https://jsonplaceholder.typicode.com'
 
@@ -34,5 +34,6 @@ def todo_all_employees():
     with open('todo_all_employees.json', 'w') as JSONFile:
         json.dump(return_dict, JSONFile)
 
+
 if __name__ == "__main__":
-    todo_all_employees()
+    everyone_todo_to_JSON()
