@@ -5,7 +5,7 @@ import requests
 from sys import argv
 
 
-def export_to_json():
+def export_to_json(user_id):
     """exports API data into JSON format"""
 
     url = 'https://jsonplaceholder.typicode.com'
