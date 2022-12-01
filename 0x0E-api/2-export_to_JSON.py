@@ -26,7 +26,7 @@ def export_to_json():
         tasks_list.append(task_dict)
     employee_dict[user_id] = tasks_list
     with open('{}.json'.format(user_id), "w") as JSONFile:
-        json.dump(dict, JSONFile)
+        json.dump(employee_dict, JSONFile)
 
 
 if __name__ == "__main__":
