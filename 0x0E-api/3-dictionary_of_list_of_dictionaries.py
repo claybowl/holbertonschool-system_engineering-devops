@@ -10,7 +10,9 @@ import sys
 def todo_all_employees():
     """makes dictionary list of dictionaries"""
     url = 'https://jsonplaceholder.typicode.com'
+
     users = requests.get("{}/users".format(url)).json()
+    todo = requests.get("{}/todos".format(url)).json()
 
     dict = {}
     user_dict = {}
@@ -19,8 +21,6 @@ def todo_all_employees():
         user_id = user.get('id')
         dict[user_id] = []
         user_dict[user_id] = user.get('username')
-
-    todo = requests.get("{}/todos".format(url)).json()
 
     for task in todo:
         task_dict_emp = {}
