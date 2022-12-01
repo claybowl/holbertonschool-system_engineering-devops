@@ -7,6 +7,7 @@ import json
 import requests
 import sys
 
+
 def todo_all_employees():
     """makes dictionary list of dictionaries"""
     url = 'https://jsonplaceholder.typicode.com'
