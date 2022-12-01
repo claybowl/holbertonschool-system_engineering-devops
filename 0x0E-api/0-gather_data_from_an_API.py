@@ -8,7 +8,7 @@ import requests
 from sys import argv
 
 
-def get_employee_todo():
+def get_employee_todo(id):
     """returns information about employee TODO list progress"""
 
     data = {'Id': id}
@@ -18,7 +18,7 @@ def get_employee_todo():
     todos = requests.get(url + 'todos', params={'userId': id}).json()
     return ([name, todos])
 
-def show_employee_todo():
+def show_employee_todo(data):
     """shows information about employee TODO list progress"""
     name = data[0]
     todo = data[1]
