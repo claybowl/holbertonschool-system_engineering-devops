@@ -29,7 +29,7 @@ def show_employee_todo(data):
         if task['completed'] is True:
             n += 1
             print_string += '\t ' + task['title'] + '\n'
-    print('Employee {} is done with task({}/{}):'.format(name, n, len(todo)))
+    print("Employee {} is done with tasks({}/{}):".format(name, n, len(todo)))
     print(print_string, end='')
 
 
