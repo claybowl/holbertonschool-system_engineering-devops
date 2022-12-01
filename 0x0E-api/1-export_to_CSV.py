@@ -20,7 +20,7 @@ def export_to_CSV():
     with open('{}.csv'.format(num), 'w') as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in tasks:
-            writer.writerow([task.get('userId'), employee_name,
+            writer.writerow([task.get('username'), employee_name,
                              task.get('completed'), task.get('title')])
 
 
