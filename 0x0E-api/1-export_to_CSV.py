@@ -9,7 +9,7 @@ import sys
 
 
 def export_to_CSV():
-    """script reads data from API and converts and stores information in csv file"""
+    """script reads data from API and stores info csv file"""
     num = sys.argv[1]
 
     url_user = "https://jsonplaceholder.typicode.com/users/{}".format(num)
