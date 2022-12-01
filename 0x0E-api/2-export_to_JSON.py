@@ -2,32 +2,35 @@
 """module 2-export_to_JSON.py"""
 import json
 import requests
-from sys import argv
+import sys
 
 
-def export_to_json(user_id):
-    """exports API data into JSON format"""
+def employee_todo_to_JSON():
+    """This method gathers employee to do information from an API
+    Employee task information is sent to a JSON file
+    """
+    user_id = sys.argv[1]
+    url = "https://jsonplaceholder.typicode.com/"
 
-    url = 'https://jsonplaceholder.typicode.com'
-    users_url = '{}/users{}'.format(url, user_id)
+    username = requests.get(url + 'users/{}'.format(user_id))
+    employee_todo = requests.get(url + 'todos?userId={}'.format(user_id))
 
-    username = requests.get(users_url).json().get('username')
-    employee_tasks = requests.get('{}/todos?userID={}'.format(url, user_id)).json()
+    username = username.json()
+    employee_todo = employee_todo.json()
 
-    dict = {}
-    list_of_dicts = []
+    employee_tasks = []
 
-    for task in employee_tasks:
+    for task in employee_todo:
         task_dict = {}
-        task_dict["task"] = task.get('title')
-        task_dict["completed"] = task.get('completed')
-        task_dict["username"] = username
-        list_of_dicts.append(task_dict)
-
-    with open('{}.json'.format(user_id), "w") as json_file:
-        dict[user_id] = list_of_dicts
-        json.dump(dict, json_file)
+        task_dict['task'] = task.get('title')
+        task_dict['completed'] = task.get('completed')
+        task_dict['username'] = username.get('username')
+        employee_tasks.append(task_dict)
+    json_dict = {}
+    json_dict[user_id] = employee_tasks
+    with open('{}.json'.format(user_id), 'w') as JSONFile:
+        json.dump(json_dict, JSONFile)
 
 
 if __name__ == "__main__":
-    export_to_json(argv[1])
+    employee_todo_to_JSON()
