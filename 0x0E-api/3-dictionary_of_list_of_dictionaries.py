@@ -3,9 +3,6 @@
 extend module 0 Python script to export
 data in the JSON format.
 """
-#!/usr/bin/python3
-"""For a given employee ID, returns TODO list info as JSON format"""
-
 import collections
 import csv
 import json
