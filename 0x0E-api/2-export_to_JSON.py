@@ -9,11 +9,11 @@ def employee_todo_to_JSON():
     """This method gathers employee to do information from an API
     Employee task information is sent to a JSON file
     """
-    user_id = sys.argv[1]
+    employee_id = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/"
 
-    username = requests.get(url + 'users/{}'.format(user_id))
-    employee_todo = requests.get(url + 'todos?userId={}'.format(user_id))
+    username = requests.get(url + 'users/{}'.format(employee_id))
+    employee_todo = requests.get(url + 'todos?userId={}'.format(employee_id))
 
     username = username.json()
     employee_todo = employee_todo.json()
@@ -27,8 +27,8 @@ def employee_todo_to_JSON():
         task_dict['username'] = username.get('username')
         employee_tasks.append(task_dict)
     json_dict = {}
-    json_dict[user_id] = employee_tasks
-    with open('{}.json'.format(user_id), 'w') as JSONFile:
+    json_dict[employee_id] = employee_tasks
+    with open('{}.json'.format(employee_id), 'w') as JSONFile:
         json.dump(json_dict, JSONFile)
 
 
