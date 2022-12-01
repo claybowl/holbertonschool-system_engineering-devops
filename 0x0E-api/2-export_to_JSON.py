@@ -30,4 +30,4 @@ def export_to_json():
 
 
 if __name__ == "__main__":
-    export_to_json(argv[1])
+    export_to_json()
