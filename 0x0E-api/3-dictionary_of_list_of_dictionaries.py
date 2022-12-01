@@ -9,9 +9,7 @@ import sys
 
 
 def everyone_todo_to_JSON():
-    """This method gathers employee to do information from an API
-    Employee task information is sent to a JSON file
-    """
+    """method creates dictionary list of dictionaries"""
     url = "https://jsonplaceholder.typicode.com/"
 
     employee_names = requests.get(url + 'users').json()
