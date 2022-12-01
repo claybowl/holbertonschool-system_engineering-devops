@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """module 0-gather_data_from_an_API
-Python script that, using this REST API, 
-for a given employee ID, returns information 
+Python script that, using this REST API,
+for a given employee ID, returns information
 about his/her TODO list progress.
 """
 import requests
@@ -17,6 +17,7 @@ def get_employee_todo(id):
     name = users[0]['name']
     todos = requests.get(url + 'todos', params={'userId': id}).json()
     return ([name, todos])
+
 
 def show_employee_todo(data):
     """shows information about employee TODO list progress"""
