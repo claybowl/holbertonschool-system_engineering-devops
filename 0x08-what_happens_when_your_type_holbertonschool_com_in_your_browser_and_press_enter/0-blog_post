@@ -1,0 +1,33 @@
+The Inner Journey of a URL: An Odyssey Through the Workings of the Internet
+By Clayton Christian
+
+
+When a user types a URL into their web browser and presses the enter key, a complex chain reaction is initiated in order to load the requested website. This process involves not only the user’s computer and the server hosting the website, but also a vast network of interconnected systems and devices that make up the internet. In this paper, we will delve deep into the inner workings of the internet to uncover the mysteries of the modern-day URL.
+
+To begin, let’s start with the basics. When you type a URL, such as holbertonschool.com, into your browser and press enter, your computer sends a request to a DNS (Domain Name System) server. This server is responsible for converting the human-readable URL you typed into an IP address that computers can understand. Think of it like a phone book for the internet — it maps URLs to IP addresses so that your computer knows where to send the request.
+
+Once your computer has obtained the IP address for holbertonschool.com, it uses TCP/IP (Transmission Control Protocol/Internet Protocol) to establish a connection with the web server that hosts the website. TCP/IP is the language that computers use to communicate with each other over the internet. It enables your computer to send a request to the web server and receive a response.
+
+But before your request can reach the web server, it must pass through several other systems. For instance, it may have to go through a firewall — a security system that controls access to a network — to ensure that only authorized requests are permitted through. This is crucial to prevent unauthorized access to the network and the website’s data and resources.
+
+When your request reaches the web server, it is handled by a web server software program — such as Apache or Nginx — which is responsible for serving the website’s HTML, CSS, and JavaScript files to your browser. These files contain the code that defines the structure, styling, and interactivity of the website.
+
+However, there’s more to a website than just the front-end HTML, CSS, and JavaScript files that are served to the user’s browser. In many cases, a website will also have a back-end application server that handles tasks such as processing user input, querying a database, or running server-side scripts. This application server sits behind the web server and is responsible for handling more complex tasks that the web server cannot handle on its own.
+
+Speaking of databases, let’s not forget about their crucial role in modern websites. A database is a collection of data that is organized and stored in a way that makes it easy to access and manage. When you fill out a form on a website, submit a comment, or perform any other action that requires the website to remember information, that data is typically stored in a database. The application server is responsible for interacting with the database to store and retrieve this data.
+
+Once the website’s HTML, CSS, and JavaScript files have been served to the user’s browser and any necessary back-end processing has been completed, the web server sends a response back to the user’s computer. This response contains the fully-rendered website, which is then displayed in the user’s browser. The user can then interact with the website, such as by clicking buttons, filling out forms, or scrolling through content.
+
+But the process doesn’t end there. As the user interacts with the website, their browser sends additional requests to the web server for any additional resources that are needed to display the updated website — such as images, videos, or other data. The web server then sends these resources back to the user’s browser, and the cycle continues until the user is finished using the website.
+
+So, the process of loading a website involves many interconnected systems and devices, from the user’s computer and the web server hosting the website, to the various networks and security systems that make up the internet. Through the use of DNS, TCP/IP, web servers, and other technologies, we are able to access the vast wealth of information and resources available on the world wide web.
+
+However, this process is not without its challenges. For example, the DNS system is vulnerable to a type of attack known as DNS poisoning, in which attackers alter the DNS records to redirect users to malicious websites. This can be particularly dangerous if the attackers are able to redirect users from a legitimate website to a fake version that is designed to steal sensitive information, such as login credentials or financial data.
+
+To counter this threat, many organizations use DNS security extensions (DNSSEC) to digitally sign their DNS records. This provides a way to verify the authenticity of the records, so that users can be confident that they are being directed to the correct website. Additionally, web servers and application servers often use encryption — such as HTTPS — to protect the data that is being transmitted between the server and the user’s browser. This prevents attackers from being able to intercept and read sensitive information as it is being transmitted over the network.
+
+In addition to security, another major challenge in the modern web is scalability. As more and more people use the internet and access websites, the demand on web servers and networks can become overwhelming. To handle this increase in traffic, many websites use a technique called caching, which involves storing frequently-accessed data in a temporary location that is closer to the user. This can help to reduce the load on the web server and improve the website’s performance for the user.
+
+Another way to improve scalability is to use a content delivery network (CDN), which is a network of servers located around the world. When a user accesses a website that uses a CDN, the CDN will redirect the user to the server that is closest to their location. This can significantly reduce the amount of time it takes for the website to load, since the data does not have to travel as far to reach the user.
+
+In conclusion, the process of loading a website is complex and involves many interconnected systems and technologies. From DNS and TCP/IP, to web servers and application servers, the internet is a vast network of interconnected devices that enables us to access the wealth of information and resources available on the web. However, this process is not without its challenges, such as security threats and the need for scalability. But by using technologies such as DNSSEC, encryption, caching, and CDNs, we can ensure that the web remains a secure and accessible resource for all.
