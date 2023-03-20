@@ -3,7 +3,7 @@
 # HAproxy will send traffic to 4941-web-01 and 4941-web-02
 # Requests will be distributed using round robin algorithm
 config_frontend="\nfrontend main\n\tbind *:80\n\tmode http\n\tdefault_backend web_servers\n"
-config_backend="\nbackend web_servers\n\tbalance roundrobin\n\toption forwardfor\n\tserver 4941-web-01 54.167.73.245:80 check\n\tserver 4941-web-02 54.227.35.99:80 check\n"
+config_backend="\nbackend web_servers\n\tbalance roundrobin\n\toption forwardfor\n\tserver 4941-web-01 13.38.125.208:80 check\n\tserver 4941-web-02 13.38.49.227:80 check\n"
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install haproxy
