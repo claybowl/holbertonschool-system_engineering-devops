@@ -46,7 +46,7 @@ host claybowl
     #   VisualHostKey no
     #   ProxyCommand ssh -q -W %h:%p gateway.example.com
     #   RekeyLimit 1G 1h
-	HostName 54.167.73.245
+	HostName 13.38.125.208
 	User ubuntu
 	PasswordAuthentication No
 	StrictHostKeyChecking No
