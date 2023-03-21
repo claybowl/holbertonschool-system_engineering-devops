@@ -1,6 +1,5 @@
-#!/bin/bash
-
-# Check if the script received the required argument (password)
+#!/usr/bin/env bash
+# generates a MySQL dump and creates a compressed archive out of it
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <mysql_root_password>"
     exit 1
